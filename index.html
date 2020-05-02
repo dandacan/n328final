@@ -557,7 +557,7 @@
 
 
     }
-    function commercial_sex_acts() {
+     function commercial_sex_acts() {
         d3.select('#bar_chart')
             .attr("transform", "translate(0, 70)");
 
@@ -620,7 +620,7 @@
                     return 'text_' + d.state_id;
                 })
                 .text(function (d) {
-                    return d.state;
+                    return d.state + " (" + d.csa_offenses + ")";
                 });
 
 
@@ -636,7 +636,7 @@
                             d3.select("#" + d.state_id)
                                 .attr("fill", color_amounts.verylow.color_hover)
                                 .attr("stroke-width", "3")
-                                .attr("stroke", "black")
+                                .attr("stroke", "black");
 
                         }
                         else if (d.csa_offenses < color_amounts.low.number){
@@ -672,12 +672,13 @@
                         else if (d.csa_offenses < color_amounts.veryhigh.number){
                             d3.select('#csa_' + d.state_id)
                                 .style('fill', '#fc9272');
+                            console.log("onmouseover_bar");
                             d3.select("#text_" + d.state_id)
                                 .style('font-weight', 'bold');
                             d3.select("#" + d.state_id)
                                 .attr("fill", color_amounts.veryhigh.color_hover)
                                 .attr("stroke-width", "3")
-                                .attr("stroke", "black")
+                                .attr("stroke", "black");
                         }
                     })
 
@@ -724,11 +725,12 @@
                             d3.select('#csa_' + d.state_id)
                                 .style('fill', null)
                                 .style('transition', '.5s');
+                            console.log("onmouseout_bar");
                             d3.select("#text_" + d.state_id)
                                 .style('font-weight', null);
                             d3.select("#" + d.state_id)
                                 .attr("fill", color_amounts.veryhigh.color)
-                                .attr("stroke-width", "0px")
+                                .attr("stroke-width", "0px");
                         }
                         });
 
@@ -780,6 +782,7 @@
                             .style('fill', '#fc9272');
                         d3.select("#text_" + d.state_id)
                             .style('font-weight', 'bold');
+                        console.log("onmouseover_text");
                         d3.select("#" + d.state_id)
                             .attr("fill", color_amounts.veryhigh.color_hover)
                             .attr("stroke-width", "3")
@@ -833,14 +836,13 @@
                             .style('transition', '.5s');
                         d3.select("#text_" + d.state_id)
                             .style('font-weight', null);
+                        console.log("onmouseout_text");
                         d3.select("#" + d.state_id)
                             .attr("fill", color_amounts.veryhigh.color)
                             .attr("stroke-width", "0px")
                     }
 
                 });
-
-
             //appending axis to chart
             canvas.append("g")
                 .attr("transform", "translate(2, 675)")
@@ -1067,7 +1069,7 @@
 
 
     }
-    function involuntary_servitude(){
+      function involuntary_servitude(){
         d3.select('#bar_chart')
             .attr("transform", "translate(0, 70)");
 
@@ -1126,7 +1128,7 @@
                     return 'text_' + d.state_id;
                 })
                 .text(function (d) {
-                    return d.state;
+                    return d.state + " (" + d.is_offenses + ")";;
                 });
 
             canvas.selectAll('rect')
@@ -1345,7 +1347,7 @@
         });
     }
 
-    function male_by_state(){
+     function male_by_state(){
         d3.select('#bar_chart')
             .attr("transform", "translate(-325, 150)");
 
@@ -1395,11 +1397,11 @@
                 .attr("x", function (d) {
                     return d.total_males * 1.5 + 5;
                 })
-                .attr('id', function (d) {
+                .attr('class', function (d) {
                     return 'text_' + d.state_id;
                 })
                 .text(function (d) {
-                    return d.state;
+                    return d.state + " (" + d.total_males + ")";
                 });
 
 
@@ -1435,7 +1437,7 @@
                         .style('fill', '#9ecae1');
                     d3.select("#female_" + d.state_id)
                         .style('fill', '#ffa8f3');
-                    d3.select("#text_" + d.state_id)
+                    d3.select(".text_" + d.state_id)
                         .style('font-weight', 'bold');
 
                 })
@@ -1447,7 +1449,7 @@
                     d3.select("#female_" + d.state_id)
                         .style('fill', null)
                         .style('transition', '.5s');
-                    d3.select("#text_" + d.state_id)
+                    d3.select(".text_" + d.state_id)
                         .style('font-weight', null);
 
                 });
@@ -1457,7 +1459,7 @@
 
     }
 
-    function female_by_state(){
+function female_by_state(){
         d3.csv("age-sex.csv", function (as_data) {
             //all code dependent on data stored here
             console.log(as_data);
@@ -1501,14 +1503,14 @@
                 .attr("x", function (d) {
                     return d.total_females * 1.5 + 5;
                 })
-                .attr('id', function (d) {
+                .attr('class', function (d) {
                     return 'text_' + d.state_id;
                 })
                 .text(function (d) {
-                    return d.state;
+                    return d.state + " (" + d.total_females + ")";
                 });
 
-            d3.csv("data.csv", function (data) {
+            d3.csv("age-sex.csv", function (data) {
             female_group.selectAll('rect')
                 .data(data)
                 .on('mouseover', function (d) {
@@ -1517,7 +1519,7 @@
                         .style('fill', '#ffa8f3');
                     d3.select("#male_" + d.state_id)
                         .style('fill', '#9ecae1');
-                    d3.select("#text_" + d.state_id)
+                    d3.selectAll(".text_" + d.state_id)
                         .style('font-weight', 'bold');
 
                 })
@@ -1529,7 +1531,7 @@
                     d3.select("#male_" + d.state_id)
                         .style('fill', null)
                         .style('transition', '.5s');
-                    d3.select("#text_" + d.state_id)
+                    d3.selectAll(".text_" + d.state_id)
                         .style('font-weight', null);
 
                 });
@@ -1541,7 +1543,7 @@
                         .style('fill', '#ffa8f3');
                     d3.select("#male_" + d.state_id)
                         .style('fill', '#9ecae1');
-                    d3.select("#text_" + d.state_id)
+                    d3.selectAll(".text_" + d.state_id)
                         .style('font-weight', 'bold');
 
                 })
@@ -1553,7 +1555,7 @@
                     d3.select("#male_" + d.state_id)
                         .style('fill', null)
                         .style('transition', '.5s');
-                    d3.select("#text_" + d.state_id)
+                    d3.selectAll(".text_" + d.state_id)
                         .style('font-weight', null);
 
                 });
