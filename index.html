@@ -37,7 +37,7 @@
             background: none;
             border: 0 !important;
             width: 200%;
-            height: 65%;
+            height: 70%;
             margin: 0;
             padding: 0 0 0 .5em;
             font-size: 2vw;
@@ -307,7 +307,7 @@
     };
     var j;
     var canvas = d3.select('body').append('svg')
-        .attr("width", 1000)
+        .attr("width", 1100)
         .attr("height", 700)
         .attr('fill', 'black')
         .attr('id', "bar_chart")
@@ -327,6 +327,8 @@
            commercial_sex_acts();
            commercial_sex_acts_map();
            d3.select("#is_legend_axis").remove();
+           d3.selectAll("#gender").remove();
+           d3.selectAll(".gender_text").remove();
            document.getElementById("female_chart").remove();
            
        }
@@ -334,6 +336,8 @@
            involuntary_servitude();
            involuntary_servitude_map();
            d3.select("#csa_legend_axis").remove();
+           d3.selectAll("#gender").remove();
+           d3.selectAll(".gender_text").remove();
            document.getElementById("female_chart").remove();
            
 
@@ -1568,7 +1572,7 @@ function female_by_state(){
         });
         d3.select("#bar_chart")
             .append("rect")
-            .attr("x", "850")
+            .attr("x", "950")
             .attr("y", "0")
             .attr("id", "gender")
             .attr("width", "20")
@@ -1582,7 +1586,7 @@ function female_by_state(){
 
         d3.select("#bar_chart")
             .append("rect")
-            .attr("x", "950")
+            .attr("x", "1050")
             .attr("y", "0")
             .attr("id", "gender")
             .attr("width", "20")
@@ -1596,7 +1600,8 @@ function female_by_state(){
         // Male legend text
         d3.select("#bar_chart")
             .append("text")
-            .attr("x", "843")
+            .attr("class", "gender_text")
+            .attr("x", "943")
             .attr("y", "40")
             .style('fill', 'black')
             .text("Male");
@@ -1605,7 +1610,8 @@ function female_by_state(){
         // Female legend text
         d3.select("#bar_chart")
             .append("text")
-            .attr("x", "937")
+            .attr("class", "gender_text")
+            .attr("x", "1037")
             .attr("y", "40")
             .style('fill', 'black')
             .text("Female");
