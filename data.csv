@@ -1,0 +1,22 @@
+state_id,state,csa_offenses,csa_total_cleared,csa_cleared_under_18,is_offenses,is_total_cleared,is_cleared_under_18,total_offenses,total_cleared,total_cleared_under_18
+AK,Alaska,11,8,0,1,0,0,12,8,0
+AZ,Arizona,19,5,0,0,0,0,19,5,0
+AR,Arkansas,4,4,0,2,0,0,6,4,0
+CO,Colorado,12,3,0,22,9,0,34,12,0
+FL,Florida,98,50,0,7,4,0,105,54,0
+IL,Illinois,21,0,0,3,0,0,24,0,0
+IN,Indiana,4,2,2,0,0,0,4,2,2
+LA,Louisiana,121,92,2,2,2,0,123,94,2
+MD,Maryland,17,15,0,0,0,0,17,15,0
+MN,Minnesota,235,191,1,0,0,0,235,191,1
+MO,Missouri,16,15,3,0,0,0,16,15,3
+NV,Nevada,140,58,35,0,0,0,140,58,35
+ND,North Dakota,4,0,0,1,1,0,5,1,0
+OK,Oklahoma,42,37,1,4,3,0,46,40,1
+RI,Rhode Island,5,2,0,1,0,0,6,2,0
+SC,South Carolina,15,9,2,7,7,0,22,16,2
+TN,Tennessee,55,26,0,0,0,0,55,26,0
+TX,Texas,130,51,2,127,27,0,257,78,2
+WA,Washington,13,3,0,1,1,0,14,4,0
+WI,Wisconsin,34,19,1,1,0,0,35,19,1
+WY,Wyoming,3,2,0,2,1,0,5,3,0
