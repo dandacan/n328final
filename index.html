@@ -1564,6 +1564,49 @@
                 .attr('class', 'axis')
                 .call(axis);
         });
+        d3.select("#bar_chart")
+            .append("rect")
+            .attr("x", "850")
+            .attr("y", "0")
+            .attr("id", "gender")
+            .attr("width", "20")
+            .attr("height", "20")
+            .attr("stroke-width", "1px")
+            .attr("stroke", "black")
+            .attr("fill", "#3182bd");
+        // Male legend color
+
+
+
+        d3.select("#bar_chart")
+            .append("rect")
+            .attr("x", "950")
+            .attr("y", "0")
+            .attr("id", "gender")
+            .attr("width", "20")
+            .attr("height", "20")
+            .attr("stroke-width", "1px")
+            .attr("stroke", "black")
+            .attr("fill", "#d378b3");
+        // Female legend
+
+
+        // Male legend text
+        d3.select("#bar_chart")
+            .append("text")
+            .attr("x", "843")
+            .attr("y", "40")
+            .style('fill', 'black')
+            .text("Male");
+
+
+        // Female legend text
+        d3.select("#bar_chart")
+            .append("text")
+            .attr("x", "937")
+            .attr("y", "40")
+            .style('fill', 'black')
+            .text("Female");
 
     }
 </script>
