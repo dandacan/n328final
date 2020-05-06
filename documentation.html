@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Human Trafficking Data Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Prompt&display=swap" rel="stylesheet">
+    <style>
+        .wrapper{
+            margin: 25px;
+        }
+        h2{
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            margin-left: 10px;
+        }
+        p, h3, h4, ul{
+            font-family: 'Prompt', sans-serif;
+            margin-left: 15px;
+            margin-top: 25px;
+        }
+        div.header-container{
+            line-height: 1.5;
+            background-color: #D3D3D3;
+            height: 100px;
+        }
+        div.section-three{
+            height: 400px;
+            background-color: #edebeb;
+
+        }
+        div.section-five{
+            background-color: #edebeb;
+            height: 2000px;
+        }
+        div.section-seven{
+            background-color: #d3d3d3;
+            height: 70px;
+        }
+        div.image-div{
+            display: flex;
+            float: left;
+            margin-left: 15px;
+        }
+        div.image-column{
+            flex: 20.33%;
+            padding: 5px;
+        }
+        a{
+            color: black;
+        }
+        a:hover{
+            transition: .2s;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="section-one">
+        <div class="header-container">
+        <h2>Sexual Harassment Data Documentation</h2>
+        </div>
+        <p style="font-size: 1.3rem;"><i>"Human trafficking involves the use of force, fraud, or coercion to obtain some type of labor or commercial sex act".</i> (U.S. DHS, 2020). Human trafficking is an ever increasing problem world-wide and even within the United States.
+            We believe that there needs to be more awareness for human trafficking which is why we created this data visualization. Our group analyzed and visualized two types of human trafficking: <b>commercial sex acts</b> and <b>involuntary
+                servitude</b>.</p>
+    </div>
+   <div class="section-two" style="font-size: 1.2rem">
+        <h3>Types of Trafficking</h3>
+        <h4>Commercial Sex Acts</h4>
+        <p>Commercial sex acts are defined as <i>"any sex act on account of which anything of value is given to or received by any person"</i> (22 USC Ch. 78: Trafficking Victims Protection). These types of crimes include the following:</p>
+        <ul>
+            <li>Prostitution</li>
+            <li>Pornography</li>
+            <li>Sex tourism</li>
+            <li>Mail order brides</li>
+            <li>Stripping/performing at sexual venues</li>
+        </ul>
+       <h4>Involuntary Servitude</h4>
+       <p> Involuntary servitude <i>"includes a condition of servitude induced by means of (a) any scheme, plan, or pattern intended to cause a person to believe that,
+           if the person did not enter into or continue in such condition, that person or another person would suffer serious harm or physical restraint; or (b) the abuse or threatened abuse of the legal process"</i> (U.S. DOS, 2020).</p>
+       <ul>
+           <li>Peonage</li>
+           <li>Prostitution</li>
+           <li>Rape</li>
+       </ul>
+   </div>
+    <div class="section-three" style="font-size: 1.2rem">
+        <h3 style="position: relative; padding-top: 15px;">Utilized Data-sets</h3>
+        <p>These were the data-sets that we used in order to construct the data visualizations:</p>
+        <ul class="dataset-list">
+            <li style="margin-bottom: 20px;">This first dataset looks at Commercial Sex Acts & Involuntary Servitude offenses per state. In order to design the visualizations, data from the respective attributes were extracted.</li>
+            <li style="margin-left: 100px; margin-bottom: 25px;"><a href="https://data.world/ucr/human-trafficking-2016/workspace/file?filename=table-1.xls">Commercial Sex Acts & Involuntary Servitude by State</a></li>
+            <li style="margin-bottom: 20px;">This second dataset looks at both of the types of trafficking by sex/gender and age per state. In order to achieve the design for the last visualization (Sex by State), totals were taken for both the male and female attributes for juvenile and non-juvenile victims.</li>
+            <li style="margin-left: 100px"><a href="https://data.world/ucr/human-trafficking-2016/workspace/file?filename=table-2.xls">Age and Sex/Gender by State</a></li>
+        </ul>
+    </div>
+    <div class="section-four" style="font-size: 1.2rem">
+        <h3>Questions to Answer</h3>
+        <p>Below are the questions we wanted to answer with our data visualization:</p>
+        <ul>
+            <li>Which states are responsible for types of human trafficking?</li>
+            <li>What is the severity of trafficking per state by type?</li>
+            <li>Which gender is most susceptible to each type of trafficking?</li>
+        </ul>
+    </div>
+    <div class="section-five" style="font-size: 1.2rem">
+        <h3 style="position: relative; padding-top: 15px";>Pre Visualization Sketches</h3>
+        <h4>Commercial Sex Acts</h4>
+        <p>Below are the sketches we created prior to designing our visualization.</p>
+        <div class="image-div">
+            <div class="image-column">
+                <img src="1.png" height="354" width="541"/>
+            </div>
+            <div class="image-column">
+                <img src="2.png" height="354" width="635"/>
+            </div>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <p>We decided we wanted to utilize a map and a bar chart for this type of data. We felt the map, along with a choropleth color scale, would help convey the geographical severity. Additionally, with the integration of the bar chart, users can see a numerical severity and compare it to the map. </p>
+        <h4>Involuntary Servitude</h4>
+        <div class="image-div">
+            <div class="image-column">
+                <img src="3.png" height="354" width="541"/>
+            </div>
+            <div class="image-column">
+                <img src="4.png" height="354" width="635"/>
+            </div>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <p>For both of these chart depictions we decided to use different shades of red. Red usually is understood as a representation for "bad things." We felt, considering the data material, this would be the most appropriate color choice.</p>
+        <h4>Sex by State</h4>
+        <img src="5.png" height="648" width="1266" style="margin-left: 20px;"/>
+        <p>For this last chart we decided to use blue and pink to convey the male and female attributes. We felt this was the most universally understood color scheme to differentiate between the two genders. Furthermore, we made the choice orient the charts side-by-side for easy cross-referencing.</p>
+    </div>
+    <div class="section-six" style="font-size: 1.2rem">
+        <h4>Conclusion</h4>
+        <p>We really enjoyed creating this visualization. It was a great task and a worthy challenge for our coding skills. We were stressed at times, angry at times, hopeful at times, and rejoicing at times. But at the very end we were able to complete it to a degree to where we were all satisfied with the end product. We hope you are too.</p>
+    </div>
+
+    <footer>
+        <div class="section-seven">
+        <p style="float:right; margin-right: 15px;">Authors: Zachariah Green, Dan Kallman, Jake Buckner</p>
+        </div>
+    </footer>
+
+
+</div>
+
+</body>
+</html>
