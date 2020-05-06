@@ -17,7 +17,10 @@
             width: 100%;
             font-family: 'Prompt', sans-serif;
         }
-
+        button:hover{
+background-color: #333333;
+transition: .2s;
+}
         .remove-map {
             display: none;
         }
@@ -1607,7 +1610,49 @@
 
                     });
             });
+            d3.select("#bar_chart")
+            .append("rect")
+            .attr("x", "850")
+            .attr("y", "0")
+            .attr("id", "gender")
+            .attr("width", "20")
+            .attr("height", "20")
+            .attr("stroke-width", "1px")
+            .attr("stroke", "black")
+            .attr("fill", "#3182bd");
+        // Male legend color
 
+
+
+        d3.select("#bar_chart")
+            .append("rect")
+            .attr("x", "950")
+            .attr("y", "0")
+            .attr("id", "gender")
+            .attr("width", "20")
+            .attr("height", "20")
+            .attr("stroke-width", "1px")
+            .attr("stroke", "black")
+            .attr("fill", "#d378b3");
+        // Female legend
+
+
+        // Male legend text
+        d3.select("#bar_chart")
+            .append("text")
+            .attr("x", "843")
+            .attr("y", "40")
+            .style('fill', 'black')
+            .text("Male");
+
+
+        // Female legend text
+        d3.select("#bar_chart")
+            .append("text")
+            .attr("x", "937")
+            .attr("y", "40")
+            .style('fill', 'black')
+            .text("Female");
             female_group.append("g")
                 .attr("transform", "translate(0, 675)")
                 .attr('class', 'axis')
@@ -1616,7 +1661,21 @@
 
     }
 </script>
-<a href="documentation.html" style="position: absolute; top:900px;"><button style="border-radius: 10px;border: 1px solid black; fill: #e3e3e3;">documentation</button></a>
-<a style="position: absolute; top:900px; left: 120px; " href="https://youtu.be/aeuqcXvxAeQ"><button style="border-radius: 10px ; border: 1px solid black; fill: #e3e3e3;">demo video</button></a>
+<a href="documentation.html" style="position: absolute; top:900px;"><button style="border-radius: 10px;border: 1px solid black; background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1vw;
+    height: 50px;
+    width: 200px;
+    cursor: pointer">documentation</button></a>
+<a style="position: absolute; top:900px; left: 250px; " href="https://youtu.be/aeuqcXvxAeQ"><button style="border-radius: 10px ; border: 1px solid black; fill: #e3e3e3;background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1vw;
+    height: 50px;
+    width: 200px;
+    cursor: pointer">demo video</button></a>
 </body>
 </html>
