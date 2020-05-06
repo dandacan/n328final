@@ -17,10 +17,10 @@
             width: 100%;
             font-family: 'Prompt', sans-serif;
         }
-        button:hover{
-background-color: #333333;
-transition: .2s;
-}
+        .link:hover{
+            background-color: #333333;
+            transition: .2s;
+        }
         .remove-map {
             display: none;
         }
@@ -1612,7 +1612,7 @@ transition: .2s;
             });
             d3.select("#bar_chart")
             .append("rect")
-            .attr("x", "850")
+            .attr("x", "900")
             .attr("y", "0")
             .attr("id", "gender")
             .attr("width", "20")
@@ -1626,7 +1626,7 @@ transition: .2s;
 
         d3.select("#bar_chart")
             .append("rect")
-            .attr("x", "950")
+            .attr("x", "1000")
             .attr("y", "0")
             .attr("id", "gender")
             .attr("width", "20")
@@ -1640,7 +1640,7 @@ transition: .2s;
         // Male legend text
         d3.select("#bar_chart")
             .append("text")
-            .attr("x", "843")
+            .attr("x", "893")
             .attr("y", "40")
             .style('fill', 'black')
             .text("Male");
@@ -1649,7 +1649,7 @@ transition: .2s;
         // Female legend text
         d3.select("#bar_chart")
             .append("text")
-            .attr("x", "937")
+            .attr("x", "987")
             .attr("y", "40")
             .style('fill', 'black')
             .text("Female");
@@ -1661,7 +1661,7 @@ transition: .2s;
 
     }
 </script>
-<a href="documentation.html" style="position: absolute; top:900px;"><button style="border-radius: 10px;border: 1px solid black; background-color: black;
+<a href="documentation.html" style="position: absolute; top:900px;"><button class="link" style="border-radius: 10px;border: 1px solid black; background-color: black;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -1669,7 +1669,7 @@ transition: .2s;
     height: 50px;
     width: 200px;
     cursor: pointer">documentation</button></a>
-<a style="position: absolute; top:900px; left: 250px; " href="https://youtu.be/aeuqcXvxAeQ"><button style="border-radius: 10px ; border: 1px solid black; fill: #e3e3e3;background-color: black;
+<a style="position: absolute; top:900px; left: 250px; " href="https://youtu.be/aeuqcXvxAeQ"><button class="link" style="border-radius: 10px ; border: 1px solid black; fill: black ;background-color: black;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
